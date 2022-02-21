@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "bpm": {
+              "type": "integer"
+            },
+            "source": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "bpm",
+            "source",
+            "timestamp"
+          ]
+        }
+      ]
+    },
+    "next_token": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "data",
+    "next_token"
+  ]
+}

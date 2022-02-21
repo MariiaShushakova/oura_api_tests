@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite" parallel="methods" thread-count="1"
+       configfailurepolicy="continue">
+    <test name="Tests" preserve-order="true">
+        <classes>
+            <class name="com.oura.ring.api.tests.pub_api2.DailyActivityTests"></class>
+            <class name="com.oura.ring.api.tests.pub_api2.HeartRateTests"></class>
+            <class name="com.oura.ring.api.tests.pub_api2.PersonalInfoTests"></class>
+            <class name="com.oura.ring.api.tests.pub_api2.SessionTests"></class>
+            <class name="com.oura.ring.api.tests.pub_api2.TagsTests"></class>
+            <class name="com.oura.ring.api.tests.pub_api2.WorkoutsTests"></class>
+        </classes>
+    </test>
+</suite>

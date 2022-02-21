@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "day": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "day",
+            "text",
+            "timestamp",
+            "tags"
+          ]
+        }
+      ]
+    },
+    "next_token": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "data",
+    "next_token"
+  ]
+}

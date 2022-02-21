@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string"
+            },
+            "calories": {
+              "type": "number"
+            },
+            "day": {
+              "type": "string"
+            },
+            "distance": {
+              "type": "null"
+            },
+            "end_datetime": {
+              "type": "string"
+            },
+            "intensity": {
+              "type": "string"
+            },
+            "label": {
+              "type": "null"
+            },
+            "source": {
+              "type": "string"
+            },
+            "start_datetime": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "activity",
+            "calories",
+            "day",
+            "distance",
+            "end_datetime",
+            "intensity",
+            "label",
+            "source",
+            "start_datetime"
+          ]
+        }
+      ]
+    },
+    "next_token": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "data",
+    "next_token"
+  ]
+}

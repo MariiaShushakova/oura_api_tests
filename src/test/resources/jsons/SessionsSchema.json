@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "day": {
+              "type": "string"
+            },
+            "start_datetime": {
+              "type": "string"
+            },
+            "end_datetime": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "heart_rate": {
+              "type": "null"
+            },
+            "heart_rate_variability": {
+              "type": "null"
+            },
+            "mood": {
+              "type": "null"
+            },
+            "motion_count": {
+              "type": "object",
+              "properties": {
+                "interval": {
+                  "type": "number"
+                },
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "timestamp": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "interval",
+                "items",
+                "timestamp"
+              ]
+            }
+          },
+          "required": [
+            "day",
+            "start_datetime",
+            "end_datetime",
+            "type",
+            "heart_rate",
+            "heart_rate_variability",
+            "mood",
+            "motion_count"
+          ]
+        }
+      ]
+    },
+    "next_token": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "data",
+    "next_token"
+  ]
+}
