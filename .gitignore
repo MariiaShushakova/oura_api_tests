@@ -9,4 +9,4 @@ obj/
 .vs/
 packages/
 test-output/
-
+.allure
