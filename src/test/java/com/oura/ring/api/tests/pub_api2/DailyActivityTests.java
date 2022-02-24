@@ -2,6 +2,10 @@ package com.oura.ring.api.tests.pub_api2;
 
 import com.oura.ring.api.tests.TestInit;
 import com.oura.ring.api.constants.DateStamp;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -13,6 +17,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class DailyActivityTests extends TestInit {
 
+    @Description("Check 'daily_activity' endpoint for particular date")
+    @Story("Public APIv2")
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     public void verifySchemaOfDailyActivityTest() {
         String startDate = "2022-01-29";
@@ -26,6 +33,7 @@ public class DailyActivityTests extends TestInit {
                 .then()
                 .assertThat()
                 .statusCode(200)
+                .log().all()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("jsons/DailyActivitySchema.json"))
                 //check a few values
                 .body("data[0].score", equalTo(84))
@@ -42,7 +50,7 @@ public class DailyActivityTests extends TestInit {
                 .when()
                 .get(HOST + "/v2/usercollection/daily_activity");
 
-        response.prettyPrint();
+        //response.prettyPrint();
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 

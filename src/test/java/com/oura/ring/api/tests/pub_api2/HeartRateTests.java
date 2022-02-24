@@ -44,7 +44,7 @@ public class HeartRateTests extends TestInit {
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verify400ForHeartRateTest() {
         String errorMsgResponse = String.format("Start time is greater than end time: [start_time: %s; end_time: %s]", DateStamp.DATE_TIME_TOMORROW2, DateStamp.DATE_TIME_TODAY2);
         Response response = given()
